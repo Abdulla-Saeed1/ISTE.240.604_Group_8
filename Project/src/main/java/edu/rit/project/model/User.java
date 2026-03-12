@@ -1,8 +1,5 @@
 package edu.rit.project.model;
 
-import org.springframework.stereotype.Component;
-
-@Component
 public class User {
     private int userId;
     private String name;
@@ -10,6 +7,15 @@ public class User {
     private int phoneNumber;
     private String password;
     private String membershipType;
+
+    public User(int userId, String name, String email, int phoneNumber, String password, String membershipType) {
+        this.userId = userId;
+        this.name = name;
+        this.email = email;
+        this.phoneNumber = phoneNumber;
+        this.password = password;
+        this.membershipType = membershipType;
+    }
 
     public int getUserId() {
         return userId;
