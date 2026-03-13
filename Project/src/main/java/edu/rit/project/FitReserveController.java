@@ -1,5 +1,6 @@
 package edu.rit.project;
 
+import edu.rit.project.model.Booking;
 import edu.rit.project.model.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -36,6 +37,32 @@ public class FitReserveController {
                           @RequestParam String membershipType) {
         service.addUser(new User(userId, name, email, phoneNumber, password, membershipType));
         return "redirect:/add/success/user";
+    }
+
+    @GetMapping("/bookings")
+    public String showBookings(Model model) {
+
+        model.addAttribute("bookings", service.getBookings());
+
+        return "bookings";
+    }
+
+    @GetMapping("/bookings/add")
+    public String addBookingPage() {
+
+        return "add-booking";
+    }
+
+    @PostMapping("/bookings/add")
+    public String addBooking(@RequestParam int bookingId,
+                             @RequestParam int userId,
+                             @RequestParam int sessionId,
+                             @RequestParam String bookingDate,
+                             @RequestParam String status) {
+
+        service.addBooking(new Booking(bookingId, userId, sessionId, bookingDate, status));
+
+        return "redirect:/add/success/booking";
     }
 
     @GetMapping("/add/success/{entity}")
