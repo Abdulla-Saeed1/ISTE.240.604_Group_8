@@ -1,14 +1,19 @@
 package edu.rit.project.model;
 
-import org.springframework.stereotype.Component;
-
-@Component
 public class Booking {
     private int bookingId;
     private int userId;
     private int sessionId;
     private String bookingDate;
     private String status;
+
+    public Booking(int bookingId, int userId, int sessionId, String bookingDate, String status) {
+        this.bookingId = bookingId;
+        this.userId = userId;
+        this.sessionId = sessionId;
+        this.bookingDate = bookingDate;
+        this.status = status;
+    }
 
     public int getBookingId() {
         return bookingId;
