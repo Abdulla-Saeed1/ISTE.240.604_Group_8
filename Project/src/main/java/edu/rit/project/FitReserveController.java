@@ -1,6 +1,6 @@
-package edu.rit.project.model;
+package edu.rit.project;
 
-import edu.rit.project.FitReserveService;
+import edu.rit.project.model.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
