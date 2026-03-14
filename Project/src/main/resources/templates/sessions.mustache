@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sessions</title>
+</head>
+
+<body>
+
+<h2>Fitness Sessions List</h2>
+
+<table style="border-collapse: collapse; border: 2px solid black;">
+
+    <tr>
+        <th>Session ID</th>
+        <th>Session Name</th>
+        <th>Trainer ID</th>
+        <th>Date</th>
+        <th>Time</th>
+        <th>Duration</th>
+        <th>Capacity</th>
+        <th>Location</th>
+    </tr>
+
+    {{#sessions}}
+        <tr>
+            <td>{{sessionId}}</td>
+            <td>{{sessionName}}</td>
+            <td>{{trainerId}}</td>
+            <td>{{date}}</td>
+            <td>{{time}}</td>
+            <td>{{duration}}</td>
+            <td>{{capacity}}</td>
+            <td>{{location}}</td>
+        </tr>
+    {{/sessions}}
+
+</table>
+
+<br>
+
+<a href="/">Back to Home</a>
+
+</body>
+</html>
