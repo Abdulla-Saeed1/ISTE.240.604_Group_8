@@ -1,8 +1,5 @@
 package edu.rit.project.model;
 
-import org.springframework.stereotype.Component;
-
-@Component
 public class FitnessSession {
     private int sessionId;
     private String sessionName;
@@ -12,6 +9,17 @@ public class FitnessSession {
     private int duration;
     private int capacity;
     private String location;
+
+    public FitnessSession(int sessionId, String sessionName, int trainerId, String date, String time, int duration, int capacity, String location) {
+        this.sessionId = sessionId;
+        this.sessionName = sessionName;
+        this.trainerId = trainerId;
+        this.date = date;
+        this.time = time;
+        this.duration = duration;
+        this.capacity = capacity;
+        this.location = location;
+    }
 
     public int getSessionId() {
         return sessionId;
