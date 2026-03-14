@@ -1,6 +1,7 @@
 package edu.rit.project;
 
 import edu.rit.project.model.Booking;
+import edu.rit.project.model.FitnessSession;
 import edu.rit.project.model.Trainer;
 import edu.rit.project.model.User;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -64,6 +65,31 @@ public class FitReserveController {
         service.addTrainer(new Trainer(name, trainerId, specialization,experienceYears,availabilitySchedule,rating));
 
         return "redirect:/add/success/trainer";
+    }
+
+    @GetMapping("/sessions")
+    public String showSessions(Model model) {
+        model.addAttribute("sessions", service.getSessions());
+        return "sessions";
+    }
+
+    @GetMapping("/sessions/add")
+    public String addSessionPage() {
+        return "add-session";
+    }
+
+    @PostMapping("/sessions/add")
+    public String addSession(@RequestParam int sessionId,
+                             @RequestParam String sessionName,
+                             @RequestParam int trainerId,
+                             @RequestParam String date,
+                             @RequestParam String time,
+                             @RequestParam int duration,
+                             @RequestParam int capacity,
+                             @RequestParam String location) {
+
+        service.addSession(new FitnessSession(sessionId, sessionName, trainerId, date, time, duration, capacity, location));
+        return "redirect:/add/success/session";
     }
 
     @GetMapping("/bookings")
