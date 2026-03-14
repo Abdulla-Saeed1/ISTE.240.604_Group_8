@@ -1,8 +1,5 @@
 package edu.rit.project.model;
 
-import org.springframework.stereotype.Component;
-
-@Component
 public class Trainer {
     private int trainerId;
     private String name;
@@ -10,6 +7,15 @@ public class Trainer {
     private int experienceYears;
     private String availabilitySchedule;
     private double rating;
+
+    public Trainer(String name, int trainerId, String specialization, int experienceYears, String availabilitySchedule, double rating) {
+        this.name = name;
+        this.trainerId = trainerId;
+        this.specialization = specialization;
+        this.experienceYears = experienceYears;
+        this.availabilitySchedule = availabilitySchedule;
+        this.rating = rating;
+    }
 
     public int getTrainerId() {
         return trainerId;
