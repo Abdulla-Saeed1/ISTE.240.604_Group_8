@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Add Trainer</title>
+</head>
+
+<body>
+
+<h2>Add Trainer</h2>
+
+<form action="/trainers/add" method="post">
+
+    <table style="border-collapse: collapse; border: 2px solid black;">
+
+        <tr>
+            <td>ID</td>
+            <td><input type="number" name="trainerId"></td>
+        </tr>
+
+        <tr>
+            <td>Name</td>
+            <td><input type="text" name="name"></td>
+        </tr>
+
+        <tr>
+            <td>Specialization</td>
+            <td><input type="text" name="specialization"></td>
+        </tr>
+
+        <tr>
+            <td>Experience</td>
+            <td><input type="number" name="experienceYears"></td>
+        </tr>
+
+        <tr>
+            <td>Availability</td>
+            <td><input type="text" name="availabilitySchedule"></td>
+        </tr>
+
+        <tr>
+            <td>Rating</td>
+            <td><input type="number" step="0.1" name="rating"></td>
+        </tr>
+
+    </table>
+
+    <button type="submit">Add Trainer</button>
+
+</form>
+
+</body>
+</html>
