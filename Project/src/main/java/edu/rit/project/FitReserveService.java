@@ -22,6 +22,9 @@ public class FitReserveService {
         trainers.add(new Trainer("Omar Ali", 201,"Strength Training",6,"Sunday-Thursday",4.6));
         trainers.add(new Trainer("Sara Hassan", 202,"Yoga",5,"Monday-Friday",4.8));
 
+        sessions.add(new FitnessSession(301, "HIIT Training", 201, "2026-03-11", "06:00 PM", 45, 15, "Gym Hall"));
+        sessions.add(new FitnessSession(302, "Morning Yoga", 202, "2026-03-10", "09:00 AM", 60, 20, "Studio A"));
+
         bookings.add(new Booking(401, 101, 301, "2026-03-05", "Confirmed"));
         bookings.add(new Booking(402, 102, 302, "2026-03-06", "Pending"));
 
@@ -43,6 +46,14 @@ public class FitReserveService {
         trainers.add(trainer);
     }
 
+    public List<FitnessSession> getSessions() {
+        return sessions;
+    }
+
+    public void addSession(FitnessSession session) {
+        sessions.add(session);
+    }
+    
     public List<Booking> getBookings() {
         return bookings;
     }
