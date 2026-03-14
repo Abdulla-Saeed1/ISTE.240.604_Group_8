@@ -8,13 +8,20 @@ import org.springframework.stereotype.Service;
 import java.util.ArrayList;
 import java.util.List;
 
+/*
+ * Service class responsible for storing and managing application data
+ * for users, trainers, fitness sessions, and bookings.
+ */
+
 @Service
 public class FitReserveService {
+    // Lists used to store all users, trainers, sessions, and bookings in memory
     private List<User> users = new ArrayList<>();
     private List<Trainer> trainers = new ArrayList<>();
     private List<FitnessSession> sessions = new ArrayList<>();
     private List<Booking> bookings = new ArrayList<>();
 
+    // Constructor initializes the application with sample data
     public FitReserveService() {
         users.add(new User(101, "Ahmad", "Ahmad@Gmail.com",0551234567, "Ahmad-131", "Standard"));
         users.add(new User(102,"Khalid","Khalid@Gmail.com",0551225432,"Khal1d-21","Premium" ));
@@ -30,6 +37,7 @@ public class FitReserveService {
 
     }
 
+    // Methods used to retrieve existing records and add new records to the system
     public List<User> getUsers() {
         return users;
     }

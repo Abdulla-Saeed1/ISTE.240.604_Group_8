@@ -1,5 +1,10 @@
 package edu.rit.project.model;
 
+/*
+ * Model class representing a booking in the FitReserve system.
+ * This class links a user to a fitness session using userId and sessionId.
+ */
+
 public class Booking {
     private int bookingId;
     private int userId;
@@ -7,6 +12,7 @@ public class Booking {
     private String bookingDate;
     private String status;
 
+    // Constructor used to create a new booking object
     public Booking(int bookingId, int userId, int sessionId, String bookingDate, String status) {
         this.bookingId = bookingId;
         this.userId = userId;
@@ -15,6 +21,7 @@ public class Booking {
         this.status = status;
     }
 
+    // Getter and setter methods for booking information
     public int getBookingId() {
         return bookingId;
     }

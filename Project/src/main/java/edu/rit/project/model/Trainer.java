@@ -1,5 +1,10 @@
 package edu.rit.project.model;
 
+/*
+ * Model class representing a trainer in the FitReserve system.
+ * This class stores trainer details such as specialization, experience, availability, and rating.
+ */
+
 public class Trainer {
     private int trainerId;
     private String name;
@@ -8,6 +13,7 @@ public class Trainer {
     private String availabilitySchedule;
     private double rating;
 
+    // Constructor used to create a new trainer object
     public Trainer(String name, int trainerId, String specialization, int experienceYears, String availabilitySchedule, double rating) {
         this.name = name;
         this.trainerId = trainerId;
@@ -17,6 +23,7 @@ public class Trainer {
         this.rating = rating;
     }
 
+    // Getter and setter methods for trainer information
     public int getTrainerId() {
         return trainerId;
     }

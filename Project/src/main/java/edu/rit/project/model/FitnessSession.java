@@ -1,5 +1,10 @@
 package edu.rit.project.model;
 
+/*
+ * Model class representing a fitness session in the FitReserve system.
+ * This class stores session details and links each session to a trainer using trainerId.
+ */
+
 public class FitnessSession {
     private int sessionId;
     private String sessionName;
@@ -10,6 +15,7 @@ public class FitnessSession {
     private int capacity;
     private String location;
 
+    // Constructor used to create a new fitness session object
     public FitnessSession(int sessionId, String sessionName, int trainerId, String date, String time, int duration, int capacity, String location) {
         this.sessionId = sessionId;
         this.sessionName = sessionName;
@@ -21,6 +27,7 @@ public class FitnessSession {
         this.location = location;
     }
 
+    // Getter and setter methods for session information
     public int getSessionId() {
         return sessionId;
     }
