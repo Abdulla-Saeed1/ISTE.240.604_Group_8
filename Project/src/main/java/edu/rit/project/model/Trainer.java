@@ -10,7 +10,7 @@ public class Trainer {
 
     public Trainer(String name, int trainerId, String specialization, int experienceYears, String availabilitySchedule, double rating) {
         this.name = name;
-        this.trainerId = trainerId;
+        this.trainerId = trainerId; 
         this.specialization = specialization;
         this.experienceYears = experienceYears;
         this.availabilitySchedule = availabilitySchedule;
