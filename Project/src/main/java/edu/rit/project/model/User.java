@@ -1,5 +1,10 @@
 package edu.rit.project.model;
 
+/*
+ * Model class representing a user in the FitReserve system.
+ * This class stores the user's basic account and membership information.
+ */
+
 public class User {
     private int userId;
     private String name;
@@ -8,6 +13,7 @@ public class User {
     private String password;
     private String membershipType;
 
+    // Constructor used to create a new User object
     public User(int userId, String name, String email, int phoneNumber, String password, String membershipType) {
         this.userId = userId;
         this.name = name;
@@ -17,6 +23,7 @@ public class User {
         this.membershipType = membershipType;
     }
 
+    // Getter and setter methods for user information
     public int getUserId() {
         return userId;
     }
