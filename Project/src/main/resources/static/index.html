@@ -1,45 +1,121 @@
 <!--
-Static landing page for the FitReserve application.
-Provides navigation links to the main entity pages.
+    FitReserve - ISTE.240.604 Group 8
+    Authors: Abdulla Almarri (744000213), Khalifa Alhammadi (399001487),
+             Ujjwal Jain (746007518), Hamad Bin Dasmal (743009877)
 -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FitReserve</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+    <style>
+        .hero {
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+            color: white;
+            padding: 80px 0 60px;
+        }
+        .hero h1 { font-size: 3rem; font-weight: 700; }
+        .feature-card { transition: transform .2s, box-shadow .2s; border: none; border-radius: 12px; }
+        .feature-card:hover { transform: translateY(-4px); box-shadow: 0 8px 24px rgba(0,0,0,.12); }
+        .feature-icon { font-size: 2.5rem; margin-bottom: 12px; }
+        .team-badge { background: #0f3460; color: white; border-radius: 50px; padding: 6px 18px; display: inline-block; margin: 4px; font-size: .85rem; }
+        .navbar-brand { font-size: 1.4rem; font-weight: 700; letter-spacing: .5px; }
+    </style>
 </head>
-<body>
-    <h2>Welcome to FitReserve</h2>
-    <p>FitReserve is a platform that allows users to browse fitness classes and personal training sessions and book them online. Trainers can manage schedules digitally, making booking easier and reducing scheduling conflicts.</p>
-    <h2>Main Features</h2>
-    <ul>
-        <li>User registration and login</li>
-        <li>Browse available fitness sessions</li>
-        <li>Book and cancel sessions</li>
-        <li>Trainers manage schedules</li>
-    </ul>
-    <h2>Who Uses FitReserve?</h2>
-    <p>Customers, trainers, and gyms use FitReserve to organize fitness bookings efficiently.</p>
+<body class="bg-light">
 
-    <h2>Navigation</h2>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top shadow-sm">
+    <div class="container">
+        <a class="navbar-brand" href="/"><i class="bi bi-lightning-charge-fill text-warning me-2"></i>FitReserve</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link" href="/users.html"><i class="bi bi-people me-1"></i>Users</a></li>
+                <li class="nav-item"><a class="nav-link" href="/trainers.html"><i class="bi bi-person-badge me-1"></i>Trainers</a></li>
+                <li class="nav-item"><a class="nav-link" href="/sessions.html"><i class="bi bi-calendar-event me-1"></i>Sessions</a></li>
+                <li class="nav-item"><a class="nav-link" href="/bookings.html"><i class="bi bi-bookmark-check me-1"></i>Bookings</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
 
-    <h3>Users</h3>
-    <a href="/users">View Users</a>
-    <a href="/users/add">Add User</a>
+<section class="hero text-center">
+    <div class="container">
+        <div class="mb-4"><i class="bi bi-lightning-charge-fill text-warning" style="font-size:3.5rem"></i></div>
+        <h1 class="mb-3">Welcome to FitReserve</h1>
+        <p class="lead mb-4 opacity-75">A platform for browsing fitness classes, booking personal training sessions,<br>and managing trainer schedules, all in one place.</p>
+        <a href="/sessions.html" class="btn btn-warning btn-lg me-2 fw-bold px-4">Browse Sessions</a>
+        <a href="/bookings.html" class="btn btn-outline-light btn-lg px-4">My Bookings</a>
+    </div>
+</section>
 
-    <h3>Trainers</h3>
-    <a href="/trainers">View Trainers</a>
-    <a href="/trainers/add">Add Trainer</a>
+<div class="container py-5">
+    <h2 class="text-center fw-bold mb-4">Manage Everything</h2>
+    <div class="row g-4">
+        <div class="col-sm-6 col-lg-3">
+            <a href="/users.html" class="text-decoration-none">
+                <div class="card feature-card h-100 p-4 text-center shadow-sm">
+                    <div class="feature-icon text-primary"><i class="bi bi-people-fill"></i></div>
+                    <h5 class="fw-bold">Users</h5>
+                    <p class="text-muted small mb-0">Register members, manage accounts and memberships</p>
+                    <span class="badge bg-primary mt-3">Abdulla Almarri</span>
+                </div>
+            </a>
+        </div>
+        <div class="col-sm-6 col-lg-3">
+            <a href="/trainers.html" class="text-decoration-none">
+                <div class="card feature-card h-100 p-4 text-center shadow-sm">
+                    <div class="feature-icon text-success"><i class="bi bi-person-badge-fill"></i></div>
+                    <h5 class="fw-bold">Trainers</h5>
+                    <p class="text-muted small mb-0">Add trainers, set specializations and schedules</p>
+                    <span class="badge bg-success mt-3">Khalifa Alhammadi</span>
+                </div>
+            </a>
+        </div>
+        <div class="col-sm-6 col-lg-3">
+            <a href="/sessions.html" class="text-decoration-none">
+                <div class="card feature-card h-100 p-4 text-center shadow-sm">
+                    <div class="feature-icon text-warning"><i class="bi bi-calendar-event-fill"></i></div>
+                    <h5 class="fw-bold">Sessions</h5>
+                    <p class="text-muted small mb-0">Schedule and browse fitness class sessions</p>
+                    <span class="badge bg-warning text-dark mt-3">Ujjwal Jain</span>
+                </div>
+            </a>
+        </div>
+        <div class="col-sm-6 col-lg-3">
+            <a href="/bookings.html" class="text-decoration-none">
+                <div class="card feature-card h-100 p-4 text-center shadow-sm">
+                    <div class="feature-icon text-danger"><i class="bi bi-bookmark-check-fill"></i></div>
+                    <h5 class="fw-bold">Bookings</h5>
+                    <p class="text-muted small mb-0">Create, track and manage session reservations</p>
+                    <span class="badge bg-danger mt-3">Hamad Bin Dasmal</span>
+                </div>
+            </a>
+        </div>
+    </div>
 
-    <h3>Fitness Sessions</h3>
-    <a href="/sessions">View Sessions</a>
-    <a href="/sessions/add">Add Session</a>
+    <div class="card shadow-sm mt-5 border-0 rounded-3">
+        <div class="card-body p-4">
+            <h4 class="fw-bold mb-3"><i class="bi bi-people-fill me-2 text-primary"></i>Group 8 - ISTE.240.604</h4>
+            <div>
+                <span class="team-badge"><i class="bi bi-person-fill me-1"></i>Abdulla Almarri &nbsp;·&nbsp; 744000213</span>
+                <span class="team-badge"><i class="bi bi-person-fill me-1"></i>Khalifa Alhammadi &nbsp;·&nbsp; 399001487</span>
+                <span class="team-badge"><i class="bi bi-person-fill me-1"></i>Ujjwal Jain &nbsp;·&nbsp; 746007518</span>
+                <span class="team-badge"><i class="bi bi-person-fill me-1"></i>Hamad Bin Dasmal &nbsp;·&nbsp; 743009877</span>
+            </div>
+        </div>
+    </div>
+</div>
 
-    <h3>Bookings</h3>
-    <a href="/bookings">View Bookings</a>
-    <a href="/bookings/add">Add Booking</a>
+<footer class="bg-dark text-secondary text-center py-3 small">
+    &copy; 2026 FitReserve | ISTE.240.604 Group 8
+</footer>
 
-    <hr>
-    <p>ISTE.240.604 Group 8 Project</p>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
