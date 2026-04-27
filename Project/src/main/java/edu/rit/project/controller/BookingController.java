@@ -1,4 +1,4 @@
-package edu.rit.project.service;
+package edu.rit.project.controller;
 
 /*
  * Author: Hamad Bin Dasmal (ID: 743009877)
@@ -6,6 +6,7 @@ package edu.rit.project.service;
  */
 
 import edu.rit.project.model.Booking;
+import edu.rit.project.service.BookingService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
